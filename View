@@ -1,0 +1,17 @@
+package projetoMVC;
+
+//Classe View
+
+public class View {
+	public void displayAluno(Aluno aluno) {
+        System.out.println("Aluno: " + aluno.getNome() +  " (Matrícula: " + aluno.getMatricula() + ")");
+    }
+
+	public void displayTurma(Turma turma) {
+        System.out.println("Turma " + turma.getCodigo() + ": Sala " + turma.getSala() + ", Horário " + turma.getHorario());
+    }
+
+    public void displayProfessor(Professor professor) {
+        System.out.println("Professor: " + professor.getNome() + " (Titulação: " + professor.getTitulacao() + ")");
+    }
+}

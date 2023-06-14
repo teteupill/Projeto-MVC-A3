@@ -1,0 +1,31 @@
+package projetoMVC;
+
+// Classe Model para Aluno
+
+public class Aluno {
+    private String nome;
+    private int matricula;
+    private Turma turma;
+
+    public Aluno(String nome, int matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+    }
+
+    public String getNome() {
+        return nome;
+        
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+    
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
+
+    public Turma getTurma() {
+        return turma;
+    }
+}

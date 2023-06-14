@@ -1,0 +1,33 @@
+package projetoMVC;
+import java.util.List;
+
+//Classe Controller
+
+
+public class Controller {
+    private List<Aluno> alunos;
+    private List<Turma> turmas;
+    private List<Professor> professores;
+    private View view;
+
+    public Controller(List<Aluno> alunos, List<Turma> turmas, List<Professor> professores, View view) {
+        this.alunos = alunos;
+        this.turmas = turmas;
+        this.professores = professores;
+        this.view = view;
+    }
+
+    public void displayAlocacao() {
+        for (Aluno aluno : alunos) {
+            view.displayAluno(aluno);
+        }
+
+        for (Turma turma : turmas) {
+            view.displayTurma(turma);
+        }
+
+        for (Professor professor : professores) {
+            view.displayProfessor(professor);
+        }
+    }
+}

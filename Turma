@@ -1,0 +1,31 @@
+package projetoMVC;
+
+// Classe Model para Turma
+
+public class Turma {
+    private int codigo;
+    private String sala;
+    private String horario;
+
+    public Turma(int codigo, String sala, String horario) {
+        this.codigo = codigo;
+        this.sala = sala;
+        this.horario = horario;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getSala() {
+        return sala;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+    
+    public void associarAluno(Aluno aluno) {
+        aluno.setTurma(this);
+    }
+}

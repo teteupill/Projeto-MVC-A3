@@ -1,0 +1,59 @@
+package projetoMVC;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+    	
+    	Aluno aluno1 = new Aluno("Beatriz", 1001);
+        Aluno aluno2 = new Aluno("João", 1002);
+        Aluno aluno3 = new Aluno("Marcos", 1003);
+        Aluno aluno4 = new Aluno("Fabíola", 1004);
+        Aluno aluno5 = new Aluno("Lucas", 1005);
+        Aluno aluno6 = new Aluno("Mario", 1006);
+        Aluno aluno7 = new Aluno("Catarina", 1007);
+        Aluno aluno8 = new Aluno("Fernanda", 1008);
+
+        List<Aluno> alunos = new ArrayList<>();
+        alunos.add(aluno1);
+        alunos.add(aluno2);
+        alunos.add(aluno3);
+        alunos.add(aluno4);
+        alunos.add(aluno5);
+        alunos.add(aluno6);
+        alunos.add(aluno7);
+        alunos.add(aluno8);
+
+
+        Turma turma1 = new Turma(1, "101", "07:00");
+        Turma turma2 = new Turma(1, "101", "13:00");
+        
+        List<Turma> turmas = new ArrayList<>();
+        turmas.add(turma1);
+        turmas.add(turma2);
+        
+        Professor professor1 = new Professor("Edilson", "Mestre em Matemática");
+        Professor professor2 = new Professor("Ana", "Mestre em História");
+        Professor professor3 = new Professor("Flávio", "Mestre em Física");
+
+        List<Professor> professores = new ArrayList<>();
+        professores.add(professor1);
+        professores.add(professor2);
+        professores.add(professor3);
+        
+        View view = new View();
+        Controller controller = new Controller(alunos, turmas, professores, view);
+        controller.displayAlocacao();
+        
+        turma1.associarAluno(aluno1);
+        turma1.associarAluno(aluno2);
+        turma1.associarAluno(aluno3);
+        turma1.associarAluno(aluno4);
+        turma2.associarAluno(aluno5);
+        turma2.associarAluno(aluno6);
+        turma2.associarAluno(aluno7);
+        turma2.associarAluno(aluno8);
+
+
+    }
+}

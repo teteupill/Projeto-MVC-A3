@@ -1,0 +1,21 @@
+package projetoMVC;
+
+// Classe Model para Professor
+
+public class Professor {
+    private String nome;
+    private String titulacao;
+
+    public Professor(String nome, String titulacao) {
+        this.nome = nome;
+        this.titulacao = titulacao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTitulacao() {
+        return titulacao;
+    }
+}
