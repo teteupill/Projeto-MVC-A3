@@ -1,0 +1,41 @@
+create database projetoMVC;
+
+use projetoMVC;
+
+create  table turma(
+codTurma int auto_increment not null primary key,
+numSala int,
+horario time);
+
+select*from turma;
+
+INSERT INTO turma (numSala, horario) VALUES (101, '07:00');
+INSERT INTO turma (numSala, horario) VALUES (101, '13:00');
+
+create  table aluno(
+codMatr int primary key,
+nome varchar (30),
+idTurma int);
+
+select*from aluno;
+
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1001, 'Beatriz', 1);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1002, 'Joao', 1);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1003, 'Marcos', 1);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1004, 'Fabiola', 1);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1005, 'Lucas', 2);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1006, 'Mario', 2);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1007, 'Catarina', 2);
+INSERT INTO aluno (codMatr, nome, idTurma) VALUES (1008, 'Fernanda', 2);
+
+create  table professor(
+codMatricula int primary key,
+nome varchar (30),
+titulacao varchar (50));
+
+INSERT INTO professor (codMatricula, nome, titulacao) VALUES (1101, 'Edilson', 'mestre em matematica');
+INSERT INTO professor (codMatricula, nome, titulacao) VALUES (1102, 'Ana', 'mestre em historia');
+INSERT INTO professor (codMatricula, nome, titulacao) VALUES (1103, 'Flavio', 'mestre em fisica');
+
+select*from professor
+
